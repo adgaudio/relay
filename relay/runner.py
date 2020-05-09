@@ -53,7 +53,7 @@ def calc_weight(errdata):
         kth -= 1
         idxs = kth > 0
         not_idxs = ~idxs
-        kth = kth[idxs]
+        kth[not_idxs] = 0
         p_k[not_idxs] = 0
         num_degrees_between_samples[not_idxs] = 0
 

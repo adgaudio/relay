@@ -2,6 +2,7 @@ FROM continuumio/miniconda
 MAINTAINER Alex Gaudio <agaudio@sailthru.com>
 ENV PATH /opt/anaconda/bin:$PATH
 
+RUN apt-get update
 RUN apt-get install -y -f procps
 WORKDIR /relay
 COPY ./setup.py /relay/
